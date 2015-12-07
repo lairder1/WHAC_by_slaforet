@@ -19,6 +19,7 @@
 "KJ16" name="Grolar"
 
 "KJ15" name="Conquest"
+"KJ18" name="Victor"
 
 
  -->
@@ -789,7 +790,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
         </entrygroup>
       </must_have>
       <benefits>
-        <ingameeffect>Iron Fang Pikeman units gain +2SPD during your first turn of the game. </ingameeffect>
+        <ingameeffect>Iron Fang Pikemen units gain +2SPD during your first turn of the game. </ingameeffect>
       </benefits>
     </level>
     <level number="3">
@@ -806,6 +807,104 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
     <level number="4">
       <benefits>
         <ingameeffect>If the only warjacks in Vladimir's battlegroup are Berserkers and/or Drago, warjacks in Vladimir's battlegroup gain Advance Deployment</ingameeffect>
+      </benefits>
+    </level>
+  </tiers>
+  <tiers name="Vladimir2 - Steam and Steel" casterId="Kx03" faction="faction_khador">
+<availableModels>
+            <type type="WARJACKS">
+                <models>Khador non-character warjacks, Drago</models>
+            </type>
+            <type type="UNITS">
+                <models>Battle Mechaniks, Man-0-War units</models>
+            </type>
+            <type type="SOLOS">
+                <models>Man-0-War Solos</models>
+            </type>
+      </availableModels>         
+    <level number="1">
+      <only>
+        <entry id="Kx03" />
+		<!-- Warjacks List-->
+        <entry id="KJ01" />
+        <entry id="KJ02" />
+        <entry id="KJ03" />
+        <entry id="KJ04" />
+        <entry id="KJ05" />
+        <entry id="KJ06" />
+        <entry id="KJ08" />
+        <entry id="KJ10" />
+        <entry id="KJ11" />
+        <entry id="KJ13" />
+        <entry id="KJ15" />
+        <entry id="KJ16" />
+          <entry id="KJ18"/>
+          <entry id="KJ19"/>
+          <entry id="KJ20"/>
+		<!-- Units List-->
+          <entry id="KU01" />
+		  <entry id="KU04" />
+		  <entry id="KU12" />
+		  <entry id="KU16" />
+		<!-- Solos List-->
+		  <entry id="KS02" />
+		  <entry id="KS04" />
+      </only>
+      <benefits>
+        <ingameeffect>Reduce the cost of Man-0-War units and Man-0-War Kovnik in this army by 1</ingameeffect>
+        <alterCost entryId="KU16" bonus="1"/>
+		<alterCost entryId="KU04" bonus="1"/>
+		<alterCost entryId="KU12" bonus="1"/>
+        <alterCost entryId="KS02" bonus="1"/>
+      </benefits>
+    </level>
+    <level number="2">
+      <!-- Must have  1 or MORE KS02-->
+      <must_have>
+        <entrygroup inBattlegroupOnly="false" jackMarshalledOnly="false" minNumber="1">
+          <entry id="KS02" />
+        </entrygroup>
+      </must_have>
+      <benefits>
+        <ingameeffect>You can redeploy one unit, for each Man-0-War Kovnik in this army, after both players have deployed but before the first player's first turn. The redeployed models must be placed on the table in a location they could have been deployed initially.</ingameeffect>
+      </benefits>
+    </level>
+    <level number="3">
+      <!-- Must have 2 or More KU16, KU04, KU12 -->
+	  <must_have>
+        <entrygroup inBattlegroupOnly="false" jackMarshalledOnly="false" minNumber="2">
+          <entry id="KU16" />
+		  <entry id="KU04" />
+		  <entry id="KU12" />
+        </entrygroup>
+      </must_have>
+      <benefits>
+        <ingameeffect>One Man-0-War Units and one Man-0-War Kovnik gain Advance Deployment.</ingameeffect>
+      </benefits>
+    </level>
+    <level number="4">
+      <!-- Must have  2 KJ-->
+      <must_have>
+        <entrygroup inBattlegroupOnly="false" jackMarshalledOnly="false" minNumber="2">
+            <entry id="KJ01" />
+			<entry id="KJ02" />
+			<entry id="KJ03" />
+			<entry id="KJ04" />
+			<entry id="KJ05" />
+			<entry id="KJ06" />
+			<entry id="KJ08" />
+			<entry id="KJ10" />
+			<entry id="KJ11" />
+			<entry id="KJ13" />
+			<entry id="KJ15" />
+			<entry id="KJ16" />
+			<entry id="KJ18"/>
+			<entry id="KJ19"/>
+			<entry id="KJ20"/>
+        </entrygroup>
+      </must_have>
+      <benefits>
+        <ingameeffect>Warjacks gain +2SPD first turn.</ingameeffect>
       </benefits>
     </level>
   </tiers>
@@ -923,7 +1022,6 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
           <entry id="KJ18"/>
           <entry id="KJ19"/>
           <entry id="KJ20"/>
-
           <entry id="KE01" />
         <entry id="KU01" />
         <entry id="KU11" />
@@ -1926,6 +2024,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
                 <entry id="KJ11"/>
                 <entry id="KJ13"/>
                 <entry id="KJ15"/>
+				<entry id="KJ16"/>
                 <entry id="KJ18"/>
                 <entry id="KJ19"/>
                 <entry id="KJ20"/>
@@ -1963,11 +2062,13 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
             </benefits>
         </level>
         <level number="2">
-            <!--  Must have 2(KU07 KU19) -->
+            <!--  Must have 2(KU07 KU19 Kx06 KA07) -->
             <must_have>
                 <entrygroup inBattlegroupOnly="false" jackMarshalledOnly="false" minNumber="2">
                     <entry id="KU07"/>
                     <entry id="KU19"/>
+					<entry id="Kx06"/>
+					<entry id="KA07"/>
                 </entrygroup>
             </must_have>
             <benefits>
@@ -1975,7 +2076,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
             </benefits>
         </level>
         <level number="3">
-            <!--  Must have KA07 1(MU09 MU11 MU20)  Valachav's unit contains at least one other model with Magic Ability -->
+            <!--  Must have KA07 1(MU09 MU11 MU20)  Valachev's unit contains at least one other model with Magic Ability -->
             <must_have>
                 <entrygroup inBattlegroupOnly="false" jackMarshalledOnly="false" minNumber="1">
                     <entry id="KA07"/>
@@ -1991,7 +2092,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
             </benefits>
         </level>
         <level number="4">
-            <!-- Must have 2(KJ01 KJ02 KJ03 KJ04 KJ05 KJ06 KJ08 KJ11 KJ13 KJ15 KJ18 KJ19 KJ20) -->
+            <!-- Must have 2(KJ01 KJ02 KJ03 KJ04 KJ05 KJ06 KJ08 KJ11 KJ13 KJ15 KJ16 KJ18 KJ19 KJ20) -->
             <must_have>
                 <entrygroup inBattlegroupOnly="false" jackMarshalledOnly="false" minNumber="2">
                     <entry id="KJ01"/>
@@ -2004,6 +2105,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
                     <entry id="KJ11"/>
                     <entry id="KJ13"/>
                     <entry id="KJ15"/>
+					<entry id="KJ16"/>
                     <entry id="KJ18"/>
                     <entry id="KJ19"/>
                     <entry id="KJ20"/>
@@ -2012,7 +2114,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
             <benefits>
                 <ingameeffect>For every two warjacks add one Koldun Lord Solo to the army free of cost. This solo does not count toward FA restrictions.</ingameeffect>
                 <freeModel>
-                    <!-- One Koldun Lord free for every 2(KJ01 KJ02 KJ03 KJ04 KJ05 KJ06 KJ08 KJ11 KJ13 KJ15 KJ18 KJ19 KJ20) -->
+                    <!-- One Koldun Lord free for every 2(KJ01 KJ02 KJ03 KJ04 KJ05 KJ06 KJ08 KJ11 KJ13 KJ15 KJ16 KJ18 KJ19 KJ20) -->
                     <entry id="KS06" />
                 </freeModel>
                 <freeModel>
@@ -2028,6 +2130,7 @@ Benefit: Models in the Butcher's battlegroup gain Advance Move. (Before the star
                         <entry id="KJ11"/>
                         <entry id="KJ13"/>
                         <entry id="KJ15"/>
+						<entry id="KJ16"/>
                         <entry id="KJ18"/>
                         <entry id="KJ19"/>
                         <entry id="KJ20"/>
